@@ -1,0 +1,2 @@
+disable 'test_dot'
+drop 'test_dot'
