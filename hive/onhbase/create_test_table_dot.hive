@@ -2,10 +2,10 @@
 CREATE TABLE hive_dot (key STRING, v1 STRING, v2 STRING)
     STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
     WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,cf1:d1.f1,cf1:d1.f2")
-    TBLPROPERTIES ("hbase.table.name"="test_dot"
-            "hbase.dot.enable"="true"
-            "hbase.dot.type"="ANALYTICAL"
-            "hbase.dot.columnfamily.doc.element"="d1"
+    TBLPROPERTIES ("hbase.table.name"="test_dot",
+            "hbase.dot.enable"="true",
+            "hbase.dot.type"="ANALYTICAL",
+            "hbase.dot.columnfamily.doc.element"="d1",
             "hbase.dot.columnfamily.doc.schema.d1"=' { "name": "d1", "type": "record", "fields": [ {"name": "f1", "type": "bytes"}, {"name": "f2", "type": "bytes"} ] }'
     );
 
