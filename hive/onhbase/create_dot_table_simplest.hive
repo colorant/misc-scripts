@@ -1,0 +1,11 @@
+
+CREATE TABLE simple_dot (key int, value STRING)
+    STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+    WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,cf:d.f")
+    TBLPROPERTIES ("hbase.table.name"="simple_dot",
+            "hbase.dot.enable"="true",
+            "hbase.dot.type"="ANALYTICAL",
+            "hbase.dot.columnfamily.doc.element"="cf:d",
+            "hbase.dot.columnfamily.doc.schema.cf:d"=' { "name": "d", "type": "record", "fields": [ {"name": "f", "type": "bytes"} ] }'
+    );
+
