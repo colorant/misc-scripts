@@ -5,7 +5,7 @@ CREATE TABLE hive_dot (key STRING, v1 STRING, v2 STRING)
     TBLPROPERTIES ("hbase.table.name"="test_dot",
             "hbase.dot.enable"="true",
             "hbase.dot.type"="ANALYTICAL",
-            "hbase.dot.columnfamily.doc.element"="d1",
-            "hbase.dot.columnfamily.doc.schema.d1"=' { "name": "d1", "type": "record", "fields": [ {"name": "f1", "type": "bytes"}, {"name": "f2", "type": "bytes"} ] }'
+            "hbase.dot.columnfamily.doc.element"="cf1:d1",
+            "hbase.dot.columnfamily.doc.schema.cf1:d1"=' { "name": "d1", "type": "record", "fields": [ {"name": "f1", "type": "bytes"}, {"name": "f2", "type": "bytes"} ] }'
     );
 
