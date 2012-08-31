@@ -1,0 +1,2 @@
+CREATE EXTERNAL TABLE if not exists ex_simple_dot (key int, value STRING)  STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler' WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,cf1:d1.f1") TBLPROPERTIES ("hbase.table.name"="ex_simple_dot");
+
