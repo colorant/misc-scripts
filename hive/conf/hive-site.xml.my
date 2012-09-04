@@ -52,7 +52,7 @@
 
 <property>
   <name>javax.jdo.option.ConnectionURL</name>
-  <value>jdbc:derby:;databaseName=metastore_db;create=true</value>
+  <value>jdbc:derby:;databaseName=/home/raymond/hive/metastore_db;create=true</value>
   <description>JDBC connect string for a JDBC metastore</description>
 </property>
 
