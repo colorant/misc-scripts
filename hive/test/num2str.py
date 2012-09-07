@@ -22,7 +22,7 @@ class NumToString():
         os.chdir(folder)
 
         for f in os.listdir("."):
-            if not f.endswith("."):
+            if os.path.isfile(f):
                 self.scan(f)
                 self.file_count += 1
 
