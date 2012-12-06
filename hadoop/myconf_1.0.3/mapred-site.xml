@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+<name>mapred.job.tracker</name>
+<value>10.0.0.71:8021</value>
+</property>
+
+<property>
+<name>mapred.tasktracker.map.tasks.maximum</name>
+<value>24</value>
+</property>
+
+<property>
+<name>mapred.tasktracker.reduce.tasks.maximum</name>
+<value>20</value>
+</property>
+
+<property>
+<name>mapred.map.child.java.opts</name>
+<value>-Xmx512M -DpreferIPv4Stack=true</value>
+</property>
+
+<property>
+<name>mapred.reduce.child.java.opts</name>
+<value>-Xmx512M -DpreferIPv4Stack=true</value>
+</property>
+
+<property>
+<name>mapred.local.dir</name>
+<value>/mnt/DP_disk1/raymond/hdfs/mapred,/mnt/DP_disk2/raymond/hdfs/mapred,/mnt/DP_disk3/raymond/hdfs/mapred,/mnt/DP_disk4/raymond/hdfs/mapred</value>
+</property>
+
+<property>
+<name>io.sort.mb</name>
+<value>200</value>
+</property>
+
+<property>
+<name>io.sort.record.percent</name>
+<value>0.05</value>
+</property>
+
+<property>
+<name>io.sort.spill.percent</name>
+<value>0.8</value>
+</property>
+
+<property>
+<name>io.sort.factor</name>
+<value>100</value>
+</property>
+
+<property>
+  <name>mapred.job.reuse.jvm.num.tasks</name>
+    <value>-1</value>
+</property>
+
+<!--
+<property>
+  <name>keep.task.files.pattern</name>
+  <value>.*m_0000.*</value>
+  <description>Keep all files from tasks whose task names match the given
+               regular expression. Defaults to none.</description>
+</property>
+-->
+
+</configuration>
+
