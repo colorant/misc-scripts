@@ -5,7 +5,7 @@
 mkdir /mnt/ramdisk1
 chmod 777 /mnt/ramdisk1
 umount /mnt/ramdisk1
-mount -t tmpfs -o noatime,nodiratime,size=24g tmpfs /mnt/ramdisk1
+mount -t tmpfs -o noatime,nodiratime,size=28g tmpfs /mnt/ramdisk1
 
 mkdir /mnt/ramdisk1/hdfs
 mkdir /mnt/ramdisk1/hdfs/data
