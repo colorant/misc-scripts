@@ -13,7 +13,10 @@ do
   rm -f $x/$testfile
   echo 3 > /proc/sys/vm/drop_caches
   sync
-  dd bs=$block count=$blockcount if=/dev/zero of=$x/$testfile conv=fdatasync 2>&1 | grep "B" | awk '{print $3 $4 " : "  $8 $9}'
+  echo  "write:" $x `dd bs=$block count=$blockcount if=/dev/zero of=$x/$testfile conv=fdatasync 2>&1 | grep "B" | awk '{print $3 $4 " : "  $8 $9}'`
+  echo 3 > /proc/sys/vm/drop_caches
+  sync
+  echo  "read:" $x `dd bs=$block count=$blockcount of=/dev/null if=$x/$testfile conv=fdatasync 2>&1 | grep "B" | awk '{print $3 $4 " : "  $8 $9}'`
   rm -f $x/$testfile
 done
 
