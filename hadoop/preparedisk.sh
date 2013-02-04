@@ -4,7 +4,7 @@
 #prepare disk dir for hadoop
 
 mydisks="/mnt/DP_disk1 /mnt/DP_disk2 /mnt/DP_disk3 /mnt/DP_disk4"
-mydir=raymond
+mydir=raymond2
 
 for x in $mydisks
 do
