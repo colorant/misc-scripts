@@ -17,7 +17,11 @@
 <!-- Site specific YARN configuration properties -->
 
 <property>
+  <name>yarn.resourcemanager.scheduler.class</name>
+  <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler</value>
+</property>
 
+<property>
 <name>yarn.resourcemanager.address</name>
 <value>10.0.2.31:8032</value>
 </property>
@@ -44,13 +48,38 @@
 
 <property>
 <name>yarn.nodemanager.aux-services</name>
-<value>mapreduce.shuffle</value>
+<value>mapreduce_shuffle</value>
 </property>
 
 <property>
 <name>yarn.nodemanager.local-dirs</name>
 <value>/mnt/DP_disk1/hadoop2/yarn/nmlocal,/mnt/DP_disk2/hadoop2/yarn/nmlocal,/mnt/DP_disk3/hadoop2/yarn/nmlocal,/mnt/DP_disk4/hadoop2/yarn/nmlocal,/mnt/DP_disk5/hadoop2/yarn/nmlocal,/mnt/DP_disk6/hadoop2/yarn/nmlocal,/mnt/DP_disk7/hadoop2/yarn/nmlocal,/mnt/DP_disk8/hadoop2/yarn/nmlocal,/mnt/DP_disk9/hadoop2/yarn/nmlocal,/mnt/DP_disk10/hadoop2/yarn/nmlocal,/mnt/DP_disk11/hadoop2/yarn/nmlocal,/mnt/DP_disk12/hadoop2/yarn/nmlocal</value>
 </property>
+
+
+<!-- nodemanager resource strategy -->
+
+<property>
+<name>yarn.nodemanager.resource.memory-mb</name>
+<value>40960</value> <!-- 40GB for Yarn -->
+</property>
+
+<property>
+<name>yarn.scheduler.minimum-allocation-mb</name>
+<value>1024</value> <!-- 1G -->
+</property>
+
+<property>
+<name>yarn.scheduler.maximum-allocation-mb</name>
+<value>8192</value> <!-- 8G -->
+</property>
+
+
+<property>
+<name>yarn.nodemanager.vmem-pmem-ratio</name>
+<value>4</value> <!-- the default value is 2.1 -->
+</property>
+
 
 
 </configuration>

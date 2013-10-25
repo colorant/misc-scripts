@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-export HADOOP_HOME=/home/raymond/hadoop2
+export HADOOP_HOME=/cluster/hadoop2
 export HADOOP_COMMON_HOME=$HADOOP_HOME
 export HADOOP_YARN_HOME=$HADOOP_HOME
 export HADOOP_HDFS_HOME=$HADOOP_HOME
